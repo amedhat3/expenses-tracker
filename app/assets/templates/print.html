@@ -1,0 +1,41 @@
+<h1>Expenses</h1>
+
+<div ng-controller="ExpensesPrintCtrl">
+  
+  <div id= "expensesList">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+            <th>Description</th>
+            <th>Comment</th>
+            <th>Amount</th>
+            <th>Datetime</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="expense in expenses">
+            <td>
+              {{expense.description}}
+            </td>
+            <td>
+              {{expense.comment}}
+            </td>
+            <td>
+              {{expense.amount}}
+            </td>
+            <td>
+              {{expense.datetime | date:'yyyy-MM-dd HH:mm'}}
+            </td>
+        </tr>
+      </tbody>
+    </table>
+      <div>
+        <span>Expenses total amount:</span> <span>{{getExpensesTotalAmount()}}</span>
+      </div>
+      <div>
+        <span>Average Expenses Per day:</span> <span>{{getAverageDayExpenses()}}</span>
+      </div>
+  </div>
+
+  <button ng-click="print()" class="btn btn-danger">Print</button>
+  </div>

@@ -1,0 +1,64 @@
+<h1>Expenses</h1>
+
+<div >
+
+  <div id="newExpensesForm">
+    <%= render 'form' %>
+  </div>
+  
+  <div id= "expensesList">
+    <a href="#/new">New</a>
+    <button id="addNewButton"
+                class="btn btn-primary">
+                New Expenses
+    </button>
+
+    <div class= "filteration_form">
+
+    <div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+            <th>Description</th>
+            <th>Comment</th>
+            <th>Amount</th>
+            <th>Datetime</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="expense in expenses">
+            <td>
+              {{expense.description}}
+            </td>
+            <td>
+              {{expense.comment}}
+            </td>
+            <td>
+              {{expense.amount}}
+            </td>
+            <td>
+              {{expense.datetime | date:'yyyy-MM-dd HH:mm'}}
+            </td>
+          <td>
+            <a href="/expenses/{{expense.id}}/edit"
+              class="btn btn-primary"><i class="icon-edit"></i>
+              Edit
+            </a>
+            <button ng-click="destroyExpense($index)" class="btn btn-danger">
+              <i class="icon-trash"></i> Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <span>Expenses total amount:</span> <span>{{getExpensesTotalAmount()}}</span>
+  <br/>
+  <span>Average Expenses Per day:</span> <span>{{getAverageDayExpenses()}}</span>
+  <br/>
+  <button ng-click="print()" class="btn btn-danger">Print</button>
+  </div>
