@@ -23,9 +23,9 @@ Notes
 
 Technologies
 ------------
-Ruby on Rails
-Angular
-Sass
-Bootstrap
-Rspec
+- Ruby on Rails
+- Angularjs
+- Sass
+- Bootstrap
+- Rspec
 
