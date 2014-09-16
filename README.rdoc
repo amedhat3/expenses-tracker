@@ -1,5 +1,7 @@
 == README
 
+(UNDER CONSTRUCTION)
+
 The project is to write a simple expenses tracker web application which present a showcase to use Rails 4 and AngularJS integration with some BDD.
 
 You can find the demo of the project on http://expenses-tracker.solgenlabs.com
