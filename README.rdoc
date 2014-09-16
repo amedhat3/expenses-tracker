@@ -1,28 +1,31 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The project is to write a simple expenses tracker web application which present a showcase to use Rails 4 and AngularJS integration with some BDD.
 
-Things you may want to cover:
+You can find the demo of the project on http://expenses-tracker.solgenlabs.com
 
-* Ruby version
+Requirments
+-----------
+1. User must be able to create an account and log in.
+2. When logged in, user can see, edit and delete expenses he entered.
+3. When entered, each expense has: date, time, description, amount, comment
+4. User can filter expenses.
+5. User can print expenses per week with total amount and average day spending.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Notes
+-----
+- Minimal UI/UX design is implemented.
+- Every client operation done using JavaScript.
+- REST API for all user actions.
+- User should be able to create an account in the system via an interface, probably a signup/register screen.
+- TDD/BDD
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Technologies
+------------
+Ruby on Rails
+Angular
+Sass
+Bootstrap
+Rspec
+
